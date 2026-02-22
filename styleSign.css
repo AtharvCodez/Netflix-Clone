@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(Netflix\ bg\ image.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+.bg-box{
+    background-color: rgba(0, 0, 0, 0.263);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 85vh;
+    width: 25vw;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.649);
+    border-radius: 10px;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.logo{
+    position: absolute;
+    height: 1em;
+    width: 10em;
+    bottom: 17em;
+    z-index: 2;
+}
+.sign{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 2;
+}
+.email{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.675);
+}
+input{
+    width: 18rem;
+    height: 40px;
+    outline: none;
+    background-color: rgba(159, 156, 156, 0.312);
+    border: 2px solid rgba(159, 156, 156, 0.312);
+    border-radius: 5px;
+    color: white;
+    padding-left: 15px;
+    font-weight: bolder;
+}
+label{
+    position: absolute;
+    padding-right: 80px;
+    pointer-events: none;
+    cursor: pointer;
+    transform-origin: left top;
+    transition: all .3s ease;
+}
+.plab{
+    padding-right: 160px;
+    pointer-events: none;
+    cursor: pointer;
+}
+input:focus + label,
+input:valid + label {
+    transform: translateY(-10px) scale(0.8);
+    font-size: 14px;
+}
+
+.checkbox-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 19em;
+    right: 14em;
+}
+.cbox{
+    height: 20px;
+}
+
+.need{
+    position: absolute;
+    top: 62%;
+    left: 60%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 19em;
+}
+button{
+    background-color: red;
+    color: white;
+    height: 40px;
+    width: 15em;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transform: scale(1);
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 22rem;
+    color: white;
+    font-size: 17.5px;
+    font-weight: bold;
+    padding: 15px;
+}
+.net{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 24em;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.signup{
+    color: white;
+    padding-left: 5px;
+}
+.checkbox-container {
+    gap: 10px;
+    font-size: 14px;
+    position: absolute;
+    display: inline;
+    top: 25em;
+    left: 3rem;
+    width: 205px;
+}
+
+.checkbox-container input {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-container label{
+    color: white;
+    
+
+}
+
+
+
+@media (max-width: 1330px) {
+    /* Make the box fill the screen and use padding for space */
+    .box {
+        width: 70vw;
+        height: 70vh;
+        border-radius: 0;
+        padding: 20px;
+        display: flex; /* Use flexbox to easily manage content */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center the whole block */
+        align-items: center;
+        gap: 15px; /* Add space between all items */
+    }
+
+    /* Reset ALL elements to a normal layout flow */
+    .main, .sign, .email, .sbox, .checkbox-container, .need, .new, .net {
+        position: static; /* VERY IMPORTANT: This resets the absolute positioning */
+        transform: none; /* Reset any transforms */
+        top: auto;
+        left: auto;
+        width: 90%; /* Give all containers a consistent width */
+        text-align: center;
+    }
+
+    /* Remove extra containers and center text */
+    main {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sign { font-size: 30px; }
+    .email, .sbox { padding: 0; }
+    
+    input, button { width: 100%; } /* Make inputs and buttons fill their containers */
+
+    .checkbox-container, .need {
+        width: auto; /* Let these take up only as much space as they need */
+    }
+    .new {
+        position: relative;
+        padding: 0;
+        top: 1rem;
+        left: auto;
+        white-space: nowrap;
+    }
+    .net {
+        position: relative;
+        font-size: 14px; 
+        top: 7rem;
+        left: auto;
+    }
+    .email label{
+        top: auto;
+        left: 2.5rem;
+        white-space: nowrap;
+    }
+}
