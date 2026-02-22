@@ -1,8 +1,7 @@
 # Netflix-Clone
 A responsive Netflix-inspired landing page built using HTML and CSS as my first frontend development project, focusing on layout structure and UI replication.
-# Netflix Clone
 
-**Sep 2025 – Present**
+**Sep 2025**
 
 A responsive Netflix Clone that recreates the original platform’s look and feel with modern styling and smooth animations. The homepage features structured UI sections and a fully designed sign-in page to deliver an authentic user experience.
 
